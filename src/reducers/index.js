@@ -1,22 +1,9 @@
-const text = (state = {upper: 'upper', lower: 'lower'}, action) => {
-  switch (action.type) {
-    case 'CHANGE_TEXT':
-      switch (action.position) {
-        case 'upper':
-          return (
-            Object.assign({}, state, {upper: action.text})
-          )
+import { combineReducers } from 'redux'
+import notation from './notation'
 
-        case 'lower':
-          return (
-            Object.assign({}, state, {lower: action.text})
-          )
-        default:
-          return state
-      }
-    default:
-      return state
-  }
-}
+// Storeの作成処理
+const reducer = combineReducers({
+  notation
+})
 
-export default text
+export default reducer

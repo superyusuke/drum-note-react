@@ -1,10 +1,10 @@
-import {connect} from 'react-redux'
-import ComponentCell from '../components/ComponentCell'
+import { connect } from 'react-redux'
+import Cell from '../components/Cell'
 
 const mapStateToProps = state => {
   return {
-    upper: state.upper,
-    lower: state.lower
+    upper: state.notation.upper,
+    lower: state.notation.lower
   }
 }
 
@@ -20,8 +20,9 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-const Cell = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(ComponentCell)
-export default Cell
+const CellContainer = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Cell)
+
+export default CellContainer

@@ -5,7 +5,7 @@ const divStyles = {
   flexDirection: 'column'
 }
 
-const ComponentCell = ({onChange, upper, lower}) => {
+const Cell = ({onChange, upper, lower}) => {
   return (
     <div style={divStyles}>
       <input type='text' name='upper' onChange={(e) => {
@@ -18,4 +18,4 @@ const ComponentCell = ({onChange, upper, lower}) => {
   )
 }
 
-export default ComponentCell
+export default Cell
