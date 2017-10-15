@@ -4,12 +4,12 @@ const text = (state = {upper: 'upper', lower: 'lower'}, action) => {
       switch (action.position) {
         case 'upper':
           return (
-                        Object.assign({}, state, {upper: action.text})
+            Object.assign({}, state, {upper: action.text})
           )
 
         case 'lower':
           return (
-                        Object.assign({}, state, {lower: action.text})
+            Object.assign({}, state, {lower: action.text})
           )
         default:
           return state

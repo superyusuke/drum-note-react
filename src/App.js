@@ -1,6 +1,6 @@
 import React from 'react'
-import {createStore} from 'redux'
-import {Provider} from 'react-redux'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 import reducer from './reducers'
 import Cell from './containers/Cell'
 
@@ -15,7 +15,7 @@ const App = () => (
 )
 
 store.subscribe(() =>
-    console.log(store.getState())
+  console.log(store.getState())
 )
 
 export default App
